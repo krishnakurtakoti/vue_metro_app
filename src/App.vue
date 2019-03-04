@@ -1,18 +1,424 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+
+
+<div class="container" id="people">source
+	<div class="filter">
+		<label><input type="radio" v-model="selectedCategory" value="All" /> All</label>
+		<label><input type="radio" v-model="selectedCategory" value="Station1" />Station1 </label>
+	
+		<label><input type="radio" v-model="selectedCategory" value="Station4" /> Station4 </label>
+	
+	
+		<label><input type="radio" v-model="selectedCategory" value="Station15" /> Station15 </label>
+		<label><input type="radio" v-model="selectedCategory" value="Station16" /> Station16 </label>
+		<label><input type="radio" v-model="selectedCategory" value="Station17" /> Station17 </label>
+		<label><input type="radio" v-model="selectedCategory" value="gStation1" /> gStation1 </label>
+	</div>
+</div>
+
+
+<div class="container" id="people">dest
+	<div class="filter"> 
+		<label><input type="radio" v-model="selectedCategory1" value="All" /> All</label>
+	
+		<div class="font-bold"> Purple Stations</div>
+		<div><label><input type="radio" v-model="selectedCategory1" value="Station1" />Station1 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="Station2" /> Station2 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="Station3" /> Station3 </label>
+			<label><input type="radio" v-model="selectedCategory1" value="Station4" /> Station4 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="Station5" /> Station5 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="Station6" /> Station6 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="Station7" /> Station7 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="Station8" /> Station8 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="Station9" /> Station9 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="Station10" /> Station10 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="Station11" /> Station11 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="Station12" /> Station12 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="Station13" /> Station13 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="Station14" /> Station14 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="Station15" /> Station15 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="Station16" /> Station16 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="Station17" /> Station17 </label>
+		</div>
+	
+
+
+				<div class="font-bold"> Green Stations</div>
+		<label><input type="radio" v-model="selectedCategory1" value="gStation1" /> gStation1 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="gStation2" /> gStation2 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="gStation3" /> gStation3 </label>
+	<label><input type="radio" v-model="selectedCategory1" value="gStation4" /> gStation4 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="gStation5" /> gStation5 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="gStation6" /> gStation6 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="gStation7" /> gStation7 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="gStation8" /> gStation8 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="gStation9" /> gStation9 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="gStation10" /> gStation10 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="gStation11" /> gStation11 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="gStation12" /> gStation12 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="gStation13" /> gStation13 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="gStation14" /> gStation14 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="gStation15" /> gStation15 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="gStation16" /> gStation16 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="gStation17" /> gStation17 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="gStation18" /> gStation18 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="gStation19" /> gStation19 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="gStation20" /> gStation20 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="gStation21" /> gStation21 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="gStation22" /> gStation22 </label>
+		<label><input type="radio" v-model="selectedCategory1" value="gStation23" /> gStation23 </label>
+
+	</div>
+</div>
+
+ 
+<h3 class="font-bold">
+	<ul>
+		<li  v-for="y in filteredPeople2">
+		{{y.liststation[0].aplha}}
+	
+			<h3 v-if="y.liststation.length >= 1 " v-bind:class="y.liststation[0].c">{{ y.liststation[0].alpha}}   </h3>
+			<h3 v-if="y.liststation.length >= 2 " v-bind:class="y.liststation[1].c">{{ y.liststation[1].alpha}}  </h3>
+			<h3 v-if="y.liststation.length >= 3 " v-bind:class="y.liststation[2].c">{{ y.liststation[2].alpha}}  </h3>
+			<h3 v-if="y.liststation.length >= 4 " v-bind:class="y.liststation[3].c">{{ y.liststation[3].alpha}}  </h3>
+			<h3 v-if="y.liststation.length >= 5 " v-bind:class="y.liststation[4].c">{{ y.liststation[4].alpha}}  </h3>
+		<h3 v-if="y.liststation.length >= 6 " v-bind:class="y.liststation[5].c">{{ y.liststation[5].alpha}}  </h3>
+			<h3 v-if="y.liststation.length >= 7 " v-bind:class="y.liststation[6].c">{{ y.liststation[6].alpha}}  </h3>
+			<h3 v-if="y.liststation.length >= 8 " v-bind:class="y.liststation[7].c">{{ y.liststation[7].alpha}}  </h3>
+			<h3 v-if="y.liststation.length >= 9 " v-bind:class="y.liststation[8].c">{{ y.liststation[8].alpha}}  </h3>
+			<h3 v-if="y.liststation.length >= 10 " v-bind:class="y.liststation[9].c">{{ y.liststation[9].alpha}}  </h3>
+			<h3 v-if="y.liststation.length >= 11 " v-bind:class="y.liststation[10].c">{{ y.liststation[10].alpha}}  </h3>
+			<h3 v-if="y.liststation.length >= 12 " v-bind:class="y.liststation[11].c">{{ y.liststation[11].alpha}}  </h3>
+			<h3 v-if="y.liststation.length >= 13 " v-bind:class="y.liststation[12].c">{{ y.liststation[12].alpha}}  </h3>
+			<h3 v-if="y.liststation.length >= 14 " v-bind:class="y.liststation[13].c">{{ y.liststation[13].alpha}}  </h3>
+			<h3 v-if="y.liststation.length >= 15 " v-bind:class="y.liststation[14].c">{{ y.liststation[14].alpha}}  </h3>
+			<h3 v-if="y.liststation.length >= 16 " v-bind:class="y.liststation[15].c">{{ y.liststation[15].alpha}}  </h3>
+			<h3 v-if="y.liststation.length >= 17 " v-bind:class="y.liststation[16].c">{{ y.liststation[16].alpha}}  </h3>
+			<h3 v-if="y.liststation.length >= 18 " v-bind:class="y.liststation[17].c">{{ y.liststation[17].alpha}}  </h3>
+<h3 v-if="y.liststation.length >= 19 " v-bind:class="y.liststation[18].c">{{ y.liststation[18].alpha}}  </h3>
+<h3 v-if="y.liststation.length >= 20 " v-bind:class="y.liststation[19].c">{{ y.liststation[19].alpha}}  </h3>
+<h3 v-if="y.liststation.length >= 21 " v-bind:class="y.liststation[20].c">{{ y.liststation[20].alpha}}  </h3>
+<h3 v-if="y.liststation.length >= 22 " v-bind:class="y.liststation[21].c">{{ y.liststation[21].alpha}}  </h3>
+<h3 v-if="y.liststation.length >= 23 " v-bind:class="y.liststation[22].c">{{ y.liststation[22].alpha}}  </h3>
+<h3 v-if="y.liststation.length >= 24 " v-bind:class="y.liststation[23].c">{{ y.liststation[23].alpha}}  </h3>
+
+		</li>
+	</ul>
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3>Listing all the source stations objects (filtering)</h3>
+<ul class="people-list">
+		<li v-for="person in filteredPeople">{{ person }}</li>
+	</ul>
+
+<h3>Listing all the dst stations objects(filtering)</h3>
+<ul class="people-list">
+		<li v-for="person in filteredPeople1">{{ person }}</li>
+	</ul>
+
+<h5>Listing with the selected src and dst stations(filtered results of objects)  person.liststation </h5>
+<ul class="people-list">
+		<li v-for="x in filteredPeople2">{{ x.liststation.length }}</li>
+	</ul>
+
+<ul class="people-list">
+		<li v-for="x in filteredPeople2">{{ x.liststation[0].alpha }}</li>
+	</ul>
+
+
+<h3 class="text-green">
+		<li  v-for="x in filteredPeople2">
+		<h3>{{ x.liststation[0].alpha }} | {{ x.liststation[0].c }}</h3>
+	</li>
+</h3>
+
+<h3 class="text-sm">
+		<li  v-for="y in filteredPeople2">
+		<h3 v-if="y.liststation.length > 0 ">{{ y.liststation1[0]}}   </h3>
+	<h3 v-if="y.liststation.length > 1 ">{{ y.liststation1[1]}}   </h3>
+	<h3 v-if="y.liststation.length > 2 ">{{ y.liststation1[2]}}  </h3>
+		<h3 v-if="y.liststation.length > 3 ">{{ y.liststation1[3]}}  </h3>
+		</li>
+		
+</h3>
+ 
+<h3 class="font-bold">
+	<ul>
+		<li  v-for="y in filteredPeople2">
+		{{y.liststation[0].aplha}}
+	
+			<h3 v-if="y.liststation.length >= 1 " v-bind:class="y.liststation[0].c">{{ y.liststation[0].alpha}}   </h3>
+			<h3 v-if="y.liststation.length >= 2 " v-bind:class="y.liststation[1].c">{{ y.liststation[1].alpha}}  </h3>
+			<h3 v-if="y.liststation.length >= 3 " v-bind:class="y.liststation[2].c">{{ y.liststation[2].alpha}}  </h3>
+			<h3 v-if="y.liststation.length >= 4 " v-bind:class="y.liststation[3].c">{{ y.liststation[3].alpha}}  </h3>
+			<h3 v-if="y.liststation.length >= 5 " v-bind:class="y.liststation[4].c">{{ y.liststation[4].alpha}}  </h3>
+		<h3 v-if="y.liststation.length >= 6 " v-bind:class="y.liststation[5].c">{{ y.liststation[5].alpha}}  </h3>
+			<h3 v-if="y.liststation.length >= 7 " v-bind:class="y.liststation[6].c">{{ y.liststation[6].alpha}}  </h3>
+			<h3 v-if="y.liststation.length >= 8 " v-bind:class="y.liststation[7].c">{{ y.liststation[7].alpha}}  </h3>
+			<h3 v-if="y.liststation.length >= 9 " v-bind:class="y.liststation[8].c">{{ y.liststation[8].alpha}}  </h3>
+			<h3 v-if="y.liststation.length >= 10 " v-bind:class="y.liststation[9].c">{{ y.liststation[9].alpha}}  </h3>
+			<h3 v-if="y.liststation.length >= 11 " v-bind:class="y.liststation[10].c">{{ y.liststation[10].alpha}}  </h3>
+			<h3 v-if="y.liststation.length >= 12 " v-bind:class="y.liststation[11].c">{{ y.liststation[11].alpha}}  </h3>
+			<h3 v-if="y.liststation.length >= 13 " v-bind:class="y.liststation[12].c">{{ y.liststation[12].alpha}}  </h3>
+			<h3 v-if="y.liststation.length >= 14 " v-bind:class="y.liststation[13].c">{{ y.liststation[13].alpha}}  </h3>
+			<h3 v-if="y.liststation.length >= 15 " v-bind:class="y.liststation[14].c">{{ y.liststation[14].alpha}}  </h3>
+			<h3 v-if="y.liststation.length >= 16 " v-bind:class="y.liststation[15].c">{{ y.liststation[15].alpha}}  </h3>
+			<h3 v-if="y.liststation.length >= 17 " v-bind:class="y.liststation[16].c">{{ y.liststation[16].alpha}}  </h3>
+			<h3 v-if="y.liststation.length >= 18 " v-bind:class="y.liststation[17].c">{{ y.liststation[17].alpha}}  </h3>
+<h3 v-if="y.liststation.length >= 19 " v-bind:class="y.liststation[18].c">{{ y.liststation[18].alpha}}  </h3>
+<h3 v-if="y.liststation.length >= 20 " v-bind:class="y.liststation[19].c">{{ y.liststation[19].alpha}}  </h3>
+<h3 v-if="y.liststation.length >= 21 " v-bind:class="y.liststation[20].c">{{ y.liststation[20].alpha}}  </h3>
+<h3 v-if="y.liststation.length >= 22 " v-bind:class="y.liststation[21].c">{{ y.liststation[21].alpha}}  </h3>
+<h3 v-if="y.liststation.length >= 23 " v-bind:class="y.liststation[22].c">{{ y.liststation[22].alpha}}  </h3>
+<h3 v-if="y.liststation.length >= 24 " v-bind:class="y.liststation[23].c">{{ y.liststation[23].alpha}}  </h3>
+
+
+		</li>
+	</ul>
+</h3>
+
+
+
+<ul class="people-list">
+		<li v-for="x in filteredPeople2">{{ x.liststation1 }}</li>
+	</ul>
+
+
+
+<h2>Listing with the selected src and dst stations(filtered results of objects)</h2>
+
+
+
+<h4 class="text-purple-dark">List of objects in data:</h4>
+
+
+ <DisplayEndResults v-for="(person1, index) in srcdst" :key="index" :person1="person1"></DisplayEndResults>
+    <ItemCard v-for="(item, index) in srcdst" :key="index" :item="item"></Itemcard>
+  <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import ItemCard from './components/ItemCard.vue'
+import DisplayEndResults from './components/DisplayEndResults.vue'
+import './assets/css/main.css'
 
 export default {
-  name: 'app',
+  name: 'app',data() {
+    return {
+     srcdst:[
+		 {src:'Station1',dst:'Station17',liststation:[{alpha:'Station1',c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'Station9',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station15',c:'text-purple'},{alpha:'Station16',c:'text-purple'},{alpha:'Station17',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		  {src:'Station1',dst:'Station16',liststation:[{alpha:'Station1',c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'Station9',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station15',c:'text-purple'},{alpha:'Station16',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		  {src:'Station1',dst:'Station15',liststation:[{alpha:'Station1',c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'Station9',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station15',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		 {src:'Station1',dst:'Station14',liststation:[{alpha:'Station1',c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'Station9',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station14',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station1',dst:'Station13',liststation:[{alpha:'Station1',c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'Station9',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station14',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		 {src:'Station1',dst:'Station12',liststation:[{alpha:'Station1',c:'text-purple'},{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'Station9',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station12',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station1',dst:'Station11',liststation:[{alpha:'Station1',c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'Station9',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station11',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station1',dst:'Station10',liststation:[{alpha:'Station1',c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'Station9',c:'text-purple'},{alpha:'Station10',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station1',dst:'Station9',liststation:[{alpha:'Station1',c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'Station9',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station1',dst:'Station8',liststation:[{alpha:'Station1',c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station1',dst:'Station7',liststation:[{alpha:'Station1',c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station1',dst:'Station6',liststation:[{alpha:'Station1',c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station1',dst:'Station5',liststation:[{alpha:'Station1',c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station1',dst:'Station4',liststation:[{alpha:'Station1',c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station1',dst:'Station3',liststation:[{alpha:'Station1',c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station1',dst:'Station2',liststation:[{alpha:'Station1',c:'text-purple'} ,{alpha:'Station2',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station1',dst:'gStation1',liststation:[{alpha:'Station1', c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation6',c:'text-green'},{alpha:'gStation5',c:'text-green'},{alpha:'gStation4',c:'text-green'},{alpha:'gStation3',c:'text-green'},{alpha:'gStation2',c:'text-green'},{alpha:'gStation1',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station1',dst:'gStation2',liststation:[{alpha:'Station1', c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation6',c:'text-green'},{alpha:'gStation5',c:'text-green'},{alpha:'gStation4',c:'text-green'},{alpha:'gStation3',c:'text-green'},{alpha:'gStation2',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station1',dst:'gStation3',liststation:[{alpha:'Station1', c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation6',c:'text-green'},{alpha:'gStation5',c:'text-green'},{alpha:'gStation4',c:'text-green'},{alpha:'gStation3',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station1',dst:'gStation4',liststation:[{alpha:'Station1', c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation6',c:'text-green'},{alpha:'gStation5',c:'text-green'},{alpha:'gStation4',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station1',dst:'gStation5',liststation:[{alpha:'Station1', c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation6',c:'text-green'},{alpha:'gStation5',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station1',dst:'gStation6',liststation:[{alpha:'Station1', c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation6',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station1',dst:'gStation7',liststation:[{alpha:'Station1', c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation7',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station1',dst:'gStation8',liststation:[{alpha:'Station1', c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation8',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station1',dst:'gStation9',liststation:[{alpha:'Station1', c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation9',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station1',dst:'gStation10',liststation:[{alpha:'Station1', c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation10',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station1',dst:'gStation11',liststation:[{alpha:'Station1', c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation11',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station1',dst:'gStation12',liststation:[{alpha:'Station1', c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station1',dst:'gStation13',liststation:[{alpha:'Station1', c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station1',dst:'gStation14',liststation:[{alpha:'Station1', c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station1',dst:'gStation15',liststation:[{alpha:'Station1', c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station1',dst:'gStation16',liststation:[{alpha:'Station1', c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'},{alpha:'gStation16',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station1',dst:'gStation17',liststation:[{alpha:'Station1', c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'},{alpha:'gStation16',c:'text-green'},{alpha:'gStation17',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station1',dst:'gStation18',liststation:[{alpha:'Station1', c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'},{alpha:'gStation16',c:'text-green'},{alpha:'gStation17',c:'text-green'},{alpha:'gStation18',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station1',dst:'gStation19',liststation:[{alpha:'Station1', c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'},{alpha:'gStation16',c:'text-green'},{alpha:'gStation17',c:'text-green'},{alpha:'gStation18',c:'text-green'},{alpha:'gStation19',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station1',dst:'gStation20',liststation:[{alpha:'Station1', c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'},{alpha:'gStation16',c:'text-green'},{alpha:'gStation17',c:'text-green'},{alpha:'gStation18',c:'text-green'},{alpha:'gStation19',c:'text-green'},{alpha:'gStation20',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station1',dst:'gStation21',liststation:[{alpha:'Station1', c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'},{alpha:'gStation16',c:'text-green'},{alpha:'gStation17',c:'text-green'},{alpha:'gStation18',c:'text-green'},{alpha:'gStation19',c:'text-green'},{alpha:'gStation20',c:'text-green'},{alpha:'gStation21',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station1',dst:'gStation22',liststation:[{alpha:'Station1', c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'},{alpha:'gStation16',c:'text-green'},{alpha:'gStation17',c:'text-green'},{alpha:'gStation18',c:'text-green'},{alpha:'gStation19',c:'text-green'},{alpha:'gStation20',c:'text-green'},{alpha:'gStation21',c:'text-green'},{alpha:'gStation22',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station1',dst:'gStation23',liststation:[{alpha:'Station1', c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'},{alpha:'gStation16',c:'text-green'},{alpha:'gStation17',c:'text-green'},{alpha:'gStation18',c:'text-green'},{alpha:'gStation19',c:'text-green'},{alpha:'gStation20',c:'text-green'},{alpha:'gStation21',c:'text-green'},{alpha:'gStation22',c:'text-green'},{alpha:'gStation23',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station4',dst:'Station17',liststation:[{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'Station9',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station15',c:'text-purple'},{alpha:'Station16',c:'text-purple'},{alpha:'Station17',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		  {src:'Station4',dst:'Station16',liststation:[{alpha:'Station1',c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'Station9',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station15',c:'text-purple'},{alpha:'Station16',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		  {src:'Station4',dst:'Station15',liststation:[{alpha:'Station1',c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'Station9',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station15',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		 {src:'Station4',dst:'Station14',liststation:[{alpha:'Station1',c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'Station9',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station14',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station4',dst:'Station13',liststation:[{alpha:'Station1',c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'Station9',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station14',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		 {src:'Station4',dst:'Station12',liststation:[{alpha:'Station1',c:'text-purple'},{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'Station9',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station12',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station4',dst:'Station11',liststation:[{alpha:'Station1',c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'Station9',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station11',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station4',dst:'Station10',liststation:[{alpha:'Station1',c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'Station9',c:'text-purple'},{alpha:'Station10',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station4',dst:'Station9',liststation:[{alpha:'Station1',c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'Station9',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station4',dst:'Station8',liststation:[{alpha:'Station1',c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station4',dst:'Station7',liststation:[{alpha:'Station1',c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station4',dst:'Station6',liststation:[{alpha:'Station1',c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station4',dst:'Station5',liststation:[{alpha:'Station1',c:'text-purple'} ,{alpha:'Station2',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station4',dst:'Station4',liststation:[{alpha:'Station4',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station4',dst:'Station3',liststation:[{alpha:'Station4',c:'text-purple'} ,{alpha:'Station3',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station4',dst:'Station2',liststation:[{alpha:'Station4',c:'text-purple'} ,{alpha:'Station3',c:'text-purple'},{alpha:'Station2',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station4',dst:'Station1',liststation:[{alpha:'Station4',c:'text-purple'} ,{alpha:'Station3',c:'text-purple'},{alpha:'Station2',c:'text-purple'},{alpha:'Station1',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station4',dst:'gStation1',liststation:[{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation6',c:'text-green'},{alpha:'gStation5',c:'text-green'},{alpha:'gStation4',c:'text-green'},{alpha:'gStation3',c:'text-green'},{alpha:'gStation2',c:'text-green'},{alpha:'gStation1',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station4',dst:'gStation2',liststation:[{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation6',c:'text-green'},{alpha:'gStation5',c:'text-green'},{alpha:'gStation4',c:'text-green'},{alpha:'gStation3',c:'text-green'},{alpha:'gStation2',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station4',dst:'gStation3',liststation:[{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation6',c:'text-green'},{alpha:'gStation5',c:'text-green'},{alpha:'gStation4',c:'text-green'},{alpha:'gStation3',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station4',dst:'gStation4',liststation:[{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation6',c:'text-green'},{alpha:'gStation5',c:'text-green'},{alpha:'gStation4',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station4',dst:'gStation5',liststation:[{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation6',c:'text-green'},{alpha:'gStation5',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station4',dst:'gStation6',liststation:[{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation6',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station4',dst:'gStation7',liststation:[{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation7',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station4',dst:'gStation8',liststation:[{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation8',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station4',dst:'gStation9',liststation:[{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation9',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station4',dst:'gStation10',liststation:[{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation10',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station4',dst:'gStation11',liststation:[{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation11',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station4',dst:'gStation12',liststation:[{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station4',dst:'gStation13',liststation:[{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station4',dst:'gStation14',liststation:[{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station4',dst:'gStation15',liststation:[{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station4',dst:'gStation16',liststation:[{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'},{alpha:'gStation16',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station4',dst:'gStation17',liststation:[{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'},{alpha:'gStation16',c:'text-green'},{alpha:'gStation17',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station4',dst:'gStation18',liststation:[{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'},{alpha:'gStation16',c:'text-green'},{alpha:'gStation17',c:'text-green'},{alpha:'gStation18',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station4',dst:'gStation19',liststation:[{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'},{alpha:'gStation16',c:'text-green'},{alpha:'gStation17',c:'text-green'},{alpha:'gStation18',c:'text-green'},{alpha:'gStation19',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station4',dst:'gStation20',liststation:[{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'},{alpha:'gStation16',c:'text-green'},{alpha:'gStation17',c:'text-green'},{alpha:'gStation18',c:'text-green'},{alpha:'gStation19',c:'text-green'},{alpha:'gStation20',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station4',dst:'gStation21',liststation:[{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'},{alpha:'gStation16',c:'text-green'},{alpha:'gStation17',c:'text-green'},{alpha:'gStation18',c:'text-green'},{alpha:'gStation19',c:'text-green'},{alpha:'gStation20',c:'text-green'},{alpha:'gStation21',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station4',dst:'gStation22',liststation:[{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'},{alpha:'gStation16',c:'text-green'},{alpha:'gStation17',c:'text-green'},{alpha:'gStation18',c:'text-green'},{alpha:'gStation19',c:'text-green'},{alpha:'gStation20',c:'text-green'},{alpha:'gStation21',c:'text-green'},{alpha:'gStation22',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station4',dst:'gStation23',liststation:[{alpha:'Station4',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station7',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'},{alpha:'gStation16',c:'text-green'},{alpha:'gStation17',c:'text-green'},{alpha:'gStation18',c:'text-green'},{alpha:'gStation19',c:'text-green'},{alpha:'gStation20',c:'text-green'},{alpha:'gStation21',c:'text-green'},{alpha:'gStation22',c:'text-green'},{alpha:'gStation23',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station15',dst:'Station17',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station16',c:'text-purple'},{alpha:'Station17',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		  {src:'Station15',dst:'Station16',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station16',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		  {src:'Station15',dst:'Station15',liststation:[{alpha:'Station15',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station15',dst:'Station14',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station15',dst:'Station13',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station15',dst:'Station12',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station15',dst:'Station11',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station15',dst:'Station10',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station10',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station15',dst:'Station9',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station9',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station15',dst:'Station8',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station9',c:'text-purple'},{alpha:'Station8',c:'text-red'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station15',dst:'Station7',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station9',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'Station7',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station15',dst:'Station6',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station9',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'Station7',c:'text-purple'},{alpha:'Station6',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station15',dst:'Station5',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station9',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'Station7',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station5',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station15',dst:'Station4',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station9',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'Station7',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station4',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station15',dst:'Station3',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station9',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'Station7',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station3',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station15',dst:'Station2',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station9',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'Station7',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station2',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station15',dst:'Station1',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station9',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'Station7',c:'text-purple'},{alpha:'Station6',c:'text-purple'},{alpha:'Station5',c:'text-purple'},{alpha:'Station4',c:'text-purple'},{alpha:'Station3',c:'text-purple'},{alpha:'Station2',c:'text-purple'},{alpha:'Station1',c:'text-purple'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station15',dst:'gStation1',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station9',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation6',c:'text-green'},{alpha:'gStation5',c:'text-green'},{alpha:'gStation4',c:'text-green'},{alpha:'gStation3',c:'text-green'},{alpha:'gStation2',c:'text-green'},{alpha:'gStation1',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station15',dst:'gStation2',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station9',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation6',c:'text-green'},{alpha:'gStation5',c:'text-green'},{alpha:'gStation4',c:'text-green'},{alpha:'gStation3',c:'text-green'},{alpha:'gStation2',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station15',dst:'gStation3',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station9',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation6',c:'text-green'},{alpha:'gStation5',c:'text-green'},{alpha:'gStation4',c:'text-green'},{alpha:'gStation3',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station15',dst:'gStation4',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station9',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation6',c:'text-green'},{alpha:'gStation5',c:'text-green'},{alpha:'gStation4',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'Station15',dst:'gStation5',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station9',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation6',c:'text-green'},{alpha:'gStation5',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station15',dst:'gStation6',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station9',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation6',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station15',dst:'gStation7',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station9',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation7',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station15',dst:'gStation8',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station9',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation8',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station15',dst:'gStation9',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station9',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation9',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station15',dst:'gStation10',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station9',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation10',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station15',dst:'gStation11',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station9',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation11',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station15',dst:'gStation12',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station9',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'},{alpha:'gStation12',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station15',dst:'gStation13',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station9',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation13',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station15',dst:'gStation14',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station9',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station15',dst:'gStation15',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station9',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station15',dst:'gStation16',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station9',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'},{alpha:'gStation16',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station15',dst:'gStation17',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station9',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'},{alpha:'gStation16',c:'text-green'},{alpha:'gStation17',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station15',dst:'gStation18',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station9',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'},{alpha:'gStation16',c:'text-green'},{alpha:'gStation17',c:'text-green'},{alpha:'gStation18',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station15',dst:'gStation19',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station9',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'},{alpha:'gStation16',c:'text-green'},{alpha:'gStation17',c:'text-green'},{alpha:'gStation18',c:'text-green'},{alpha:'gStation19',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station15',dst:'gStation20',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station9',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'},{alpha:'gStation16',c:'text-green'},{alpha:'gStation17',c:'text-green'},{alpha:'gStation18',c:'text-green'},{alpha:'gStation19',c:'text-green'},{alpha:'gStation20',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station15',dst:'gStation21',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station9',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'},{alpha:'gStation16',c:'text-green'},{alpha:'gStation17',c:'text-green'},{alpha:'gStation18',c:'text-green'},{alpha:'gStation19',c:'text-green'},{alpha:'gStation20',c:'text-green'},{alpha:'gStation21',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station15',dst:'gStation22',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station9',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'},{alpha:'gStation16',c:'text-green'},{alpha:'gStation17',c:'text-green'},{alpha:'gStation18',c:'text-green'},{alpha:'gStation19',c:'text-green'},{alpha:'gStation20',c:'text-green'},{alpha:'gStation21',c:'text-green'},{alpha:'gStation22',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'Station15',dst:'gStation23',liststation:[{alpha:'Station15',c:'text-purple'},{alpha:'Station14',c:'text-purple'},{alpha:'Station13',c:'text-purple'},{alpha:'Station12',c:'text-purple'},{alpha:'Station11',c:'text-purple'},{alpha:'Station10',c:'text-purple'},{alpha:'Station9',c:'text-purple'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'},{alpha:'gStation16',c:'text-green'},{alpha:'gStation17',c:'text-green'},{alpha:'gStation18',c:'text-green'},{alpha:'gStation19',c:'text-green'},{alpha:'gStation20',c:'text-green'},{alpha:'gStation21',c:'text-green'},{alpha:'gStation22',c:'text-green'},{alpha:'gStation23',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'gStation1',dst:'gStation14',liststation:[{alpha:'gStation1',c:'text-green'},{alpha:'gStation2',c:'text-green'},{alpha:'gStation3',c:'text-green'},{alpha:'gStation4',c:'text-green'},{alpha:'gStation5',c:'text-green'},{alpha:'gStation6',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation13',c:'text-green'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'gStation1',dst:'gStation15',liststation:[{alpha:'gStation1',c:'text-green'},{alpha:'gStation2',c:'text-green'},{alpha:'gStation3',c:'text-green'},{alpha:'gStation4',c:'text-green'},{alpha:'gStation5',c:'text-green'},{alpha:'gStation6',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation13',c:'text-green'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'gStation1',dst:'gStation16',liststation:[{alpha:'gStation1',c:'text-green'},{alpha:'gStation2',c:'text-green'},{alpha:'gStation3',c:'text-green'},{alpha:'gStation4',c:'text-green'},{alpha:'gStation5',c:'text-green'},{alpha:'gStation6',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation13',c:'text-green'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'},{alpha:'gStation16',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'gStation1',dst:'gStation17',liststation:[{alpha:'gStation1',c:'text-green'},{alpha:'gStation2',c:'text-green'},{alpha:'gStation3',c:'text-green'},{alpha:'gStation4',c:'text-green'},{alpha:'gStation5',c:'text-green'},{alpha:'gStation6',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation13',c:'text-green'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'},{alpha:'gStation16',c:'text-green'},{alpha:'gStation17',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'gStation1',dst:'gStation18',liststation:[{alpha:'gStation1',c:'text-green'},{alpha:'gStation2',c:'text-green'},{alpha:'gStation3',c:'text-green'},{alpha:'gStation4',c:'text-green'},{alpha:'gStation5',c:'text-green'},{alpha:'gStation6',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation13',c:'text-green'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'},{alpha:'gStation16',c:'text-green'},{alpha:'gStation17',c:'text-green'},{alpha:'gStation18',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'gStation1',dst:'gStation19',liststation:[{alpha:'gStation1',c:'text-green'},{alpha:'gStation2',c:'text-green'},{alpha:'gStation3',c:'text-green'},{alpha:'gStation4',c:'text-green'},{alpha:'gStation5',c:'text-green'},{alpha:'gStation6',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation13',c:'text-green'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'},{alpha:'gStation16',c:'text-green'},{alpha:'gStation17',c:'text-green'},{alpha:'gStation18',c:'text-green'},{alpha:'gStation19',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'gStation1',dst:'gStation20',liststation:[{alpha:'gStation1',c:'text-green'},{alpha:'gStation2',c:'text-green'},{alpha:'gStation3',c:'text-green'},{alpha:'gStation4',c:'text-green'},{alpha:'gStation5',c:'text-green'},{alpha:'gStation6',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation13',c:'text-green'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'},{alpha:'gStation16',c:'text-green'},{alpha:'gStation17',c:'text-green'},{alpha:'gStation18',c:'text-green'},{alpha:'gStation19',c:'text-green'},{alpha:'gStation20',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'gStation1',dst:'gStation21',liststation:[{alpha:'gStation1',c:'text-green'},{alpha:'gStation2',c:'text-green'},{alpha:'gStation3',c:'text-green'},{alpha:'gStation4',c:'text-green'},{alpha:'gStation5',c:'text-green'},{alpha:'gStation6',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation13',c:'text-green'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'},{alpha:'gStation16',c:'text-green'},{alpha:'gStation17',c:'text-green'},{alpha:'gStation18',c:'text-green'},{alpha:'gStation19',c:'text-green'},{alpha:'gStation20',c:'text-green'},{alpha:'gStation21',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'gStation1',dst:'gStation22',liststation:[{alpha:'gStation1',c:'text-green'},{alpha:'gStation2',c:'text-green'},{alpha:'gStation3',c:'text-green'},{alpha:'gStation4',c:'text-green'},{alpha:'gStation5',c:'text-green'},{alpha:'gStation6',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation13',c:'text-green'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'},{alpha:'gStation16',c:'text-green'},{alpha:'gStation17',c:'text-green'},{alpha:'gStation18',c:'text-green'},{alpha:'gStation19',c:'text-green'},{alpha:'gStation20',c:'text-green'},{alpha:'gStation21',c:'text-green'},{alpha:'gStation22',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'gStation1',dst:'gStation23',liststation:[{alpha:'gStation1',c:'text-green'},{alpha:'gStation2',c:'text-green'},{alpha:'gStation3',c:'text-green'},{alpha:'gStation4',c:'text-green'},{alpha:'gStation5',c:'text-green'},{alpha:'gStation6',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation13',c:'text-green'},{alpha:'Station8',c:'text-red'},{alpha:'gStation14',c:'text-green'},{alpha:'gStation15',c:'text-green'},{alpha:'gStation16',c:'text-green'},{alpha:'gStation17',c:'text-green'},{alpha:'gStation18',c:'text-green'},{alpha:'gStation19',c:'text-green'},{alpha:'gStation20',c:'text-green'},{alpha:'gStation21',c:'text-green'},{alpha:'gStation22',c:'text-green'},{alpha:'gStation23',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'gStation1',dst:'gStation13',liststation:[{alpha:'gStation1',c:'text-green'},{alpha:'gStation2',c:'text-green'},{alpha:'gStation3',c:'text-green'},{alpha:'gStation4',c:'text-green'},{alpha:'gStation5',c:'text-green'},{alpha:'gStation6',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation12',c:'text-green'},{alpha:'gStation13',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'gStation1',dst:'gStation12',liststation:[{alpha:'gStation1',c:'text-green'},{alpha:'gStation2',c:'text-green'},{alpha:'gStation3',c:'text-green'},{alpha:'gStation4',c:'text-green'},{alpha:'gStation5',c:'text-green'},{alpha:'gStation6',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation11',c:'text-green'},{alpha:'gStation12',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'gStation1',dst:'gStation11',liststation:[{alpha:'gStation1',c:'text-green'},{alpha:'gStation2',c:'text-green'},{alpha:'gStation3',c:'text-green'},{alpha:'gStation4',c:'text-green'},{alpha:'gStation5',c:'text-green'},{alpha:'gStation6',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation10',c:'text-green'},{alpha:'gStation11',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'gStation1',dst:'gStation10',liststation:[{alpha:'gStation1',c:'text-green'},{alpha:'gStation2',c:'text-green'},{alpha:'gStation3',c:'text-green'},{alpha:'gStation4',c:'text-green'},{alpha:'gStation5',c:'text-green'},{alpha:'gStation6',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation9',c:'text-green'},{alpha:'gStation10',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'gStation1',dst:'gStation9',liststation:[{alpha:'gStation1',c:'text-green'},{alpha:'gStation2',c:'text-green'},{alpha:'gStation3',c:'text-green'},{alpha:'gStation4',c:'text-green'},{alpha:'gStation5',c:'text-green'},{alpha:'gStation6',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation8',c:'text-green'},{alpha:'gStation9',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+    {src:'gStation1',dst:'gStation8',liststation:[{alpha:'gStation1',c:'text-green'},{alpha:'gStation2',c:'text-green'},{alpha:'gStation3',c:'text-green'},{alpha:'gStation4',c:'text-green'},{alpha:'gStation5',c:'text-green'},{alpha:'gStation6',c:'text-green'},{alpha:'gStation7',c:'text-green'},{alpha:'gStation8',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'gStation1',dst:'gStation7',liststation:[{alpha:'gStation1',c:'text-green'},{alpha:'gStation2',c:'text-green'},{alpha:'gStation3',c:'text-green'},{alpha:'gStation4',c:'text-green'},{alpha:'gStation5',c:'text-green'},{alpha:'gStation6',c:'text-green'},{alpha:'gStation7',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'gStation1',dst:'gStation6',liststation:[{alpha:'gStation1',c:'text-green'},{alpha:'gStation2',c:'text-green'},{alpha:'gStation3',c:'text-green'},{alpha:'gStation4',c:'text-green'},{alpha:'gStation5',c:'text-green'},{alpha:'gStation6',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'gStation1',dst:'gStation5',liststation:[{alpha:'gStation1',c:'text-green'},{alpha:'gStation2',c:'text-green'},{alpha:'gStation3',c:'text-green'},{alpha:'gStation4',c:'text-green'},{alpha:'gStation5',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'gStation1',dst:'gStation4',liststation:[{alpha:'gStation1',c:'text-green'},{alpha:'gStation2',c:'text-green'},{alpha:'gStation3',c:'text-green'},{alpha:'gStation4',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'gStation1',dst:'gStation3',liststation:[{alpha:'gStation1',c:'text-green'},{alpha:'gStation2',c:'text-green'},{alpha:'gStation3',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'gStation1',dst:'gStation2',liststation:[{alpha:'gStation1',c:'text-green'},{alpha:'gStation2',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+		{src:'gStation1',dst:'gStation1',liststation:[{alpha:'gStation1',c:'text-green'}] ,liststation1:['Station1', 'Station2'],fare:12},
+
+
+
+
+
+
+
+		 ],
+		 selectedCategory1:"All",selectedCategory:"All"};
+	  },
   components: {
-    HelloWorld
-  }
+    HelloWorld,ItemCard,DisplayEndResults
+  },computed: {
+		filteredPeople: function() {
+			var vm = this;
+			var category = vm.selectedCategory;
+			
+			if(category === "All") {
+				return vm.srcdst;
+			} else {
+				return vm.srcdst.filter(function(person) {
+					return person.src === category;
+				});
+			}
+		},	filteredPeople1: function() {
+			var vm = this;
+			var category1 = vm.selectedCategory1;
+			
+			if(category1 === "All") {
+				return vm.srcdst;
+			} else {
+				return vm.srcdst.filter(function(person) {
+					return person.dst === category1;
+				});
+			}
+		},filteredPeople2: function() {
+			var vm = this;
+			var category1 = vm.selectedCategory1;
+			var category = vm.selectedCategory;
+			if(category1 === "All") {
+				return vm.srcdst;
+			} else {
+				return vm.srcdst.filter(function(person) {
+					return person.dst === category1 && person.src === category;
+				});
+			}
+		}
+	}
 }
 </script>
 
